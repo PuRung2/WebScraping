@@ -34,7 +34,7 @@
   
 4. Scrapy 설치
 
-   4.1 CMD창 혹은 Powershell창에서 pip를 이용하여 설치합니다.(pip install Scrapy) 설치 후 scrapy명령어를 입력하여 정상적으로 설치 됬는지 확인합니다.
+   4.1 CMD창 혹은 Powershell창에서 pip를 이용하여 설치합니다.(pip install Scrapy) 설치 후 scrapy명령어를 입력하여 정상적으로 설치완료 됬는지 확인합니다.
 
 
 Scrapy 설치까지 완료하였다면 셋팅은 완료입니다.
