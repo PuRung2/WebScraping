@@ -1,42 +1,44 @@
-��ũ���� ��ġ �� ����
+스크래피 설치 및 셋팅
 
-������ ���̽� ��ġ �� ������ �Ϸ� �Ǿ��ٴ� �����Ͽ� �����մϴ�.
+이전의 파이썬 설치 및 셋팅이 완료 되었다는 가정하에 진행합니다.
 
-1. pywin32 ��ġ
+1. pywin32 설치
   
-   1.1 ��ġ ���� �ٿ�ε� http://sourceforge.net/projects/pywin32/ �� ����
+   1.1 설치 파일 다운로드 http://sourceforge.net/projects/pywin32/ 에 접속
    
-   1.2 Files -> pywin32 Ŭ�� 
+   1.2 Files -> pywin32 클릭 
  
-   1.3 ���� �ֱ� Build ���� Ŭ��(2018.01.12 ���� Build221)
+   1.3 가장 최근 Build 버전 클릭(2018.01.12 기준 Build221)
    
-   1.4 �ڽ��� ������ �´� ��ġ���� �ٿ�ε�. OS 32bit�� win32, 64bit�� amd64�� ������ �ǰ�, ������ ������ ���̽� ������ �´°� ������ �˴ϴ�.
-       ex) ������ Windows 64bit,Python 2.7.x �����̶��, pywin32-221.win-amd64-py2.7exe �� ������ �˴ϴ�.
+   1.4 자신의 버전에 맞는 설치파일 다운로드. OS 32bit는 win32, 64bit는 amd64를 고르면 되고, 버전은 각자의 파이썬 버전에 맞는걸 고르면 됩니다.
+       ex) 본인이 Windows 64bit,Python 2.7.x 버전이라면, pywin32-221.win-amd64-py2.7exe 를 고르면 됩니다.
  
-   1.5 ��ġ������ �����Ͽ� ��ġ �Ϸ��ϱ�.
+   1.5 설치파일을 실행하여 설치 완료하기.
 
 
-2.lxml ��ġ
+2.lxml 설치
 
-   2.1 PIP��Ű���� �̿��ϸ� ������ ��ġ�� �� �ֽ��ϴ�. CMDâ Ȥ�� Powershellâ���� pip install lxml �� �Է��� �ֽø� �˴ϴ�.
+   2.1 PIP패키지를 이용하면 간단히 설치할 수 있습니다. CMD창 혹은 Powershell창에서 pip install lxml 을 입력해 주시면 됩니다.
     
-      Python 3.x �������� pip3 install lxml��� �Ͻø� �˴ϴ�.(pip�� 3�� ���̼žߵ˴ϴ�.)
+      Python 3.x 버전대라면 pip3 install lxml라고 하시면 됩니다.(pip에 3을 붙이셔야됩니다.)
 
-3. pyOpenSSL ��ġ
+3. pyOpenSSL 설치
 
-   3.1 ���� https://pypi.python.org/pypi/pyOpenSSL �� �����ؼ� ��ġ ������ �ٿ�ε� �޽��ϴ�. 
+   3.1 먼저 https://pypi.python.org/pypi/pyOpenSSL 에 접속해서 설치 파일을 다운로드 받습니다. 
 
-       ��ũ���� �����ø� �� ��¥ ���� �ֽ� ������ pyOpenSSL-17.5.0-py2.py3-none-any.whl (md5, pgp) �� �ֽ��ϴ�. Ŭ���Ͽ� �ٿ�ε� �޵��� �մϴ�.
+       스크롤을 내리시면 현 날짜 기준 최신 버전인 pyOpenSSL-17.5.0-py2.py3-none-any.whl (md5, pgp) 이 있습니다. 클릭하여 다운로드 받도록 합니다.
 
-   3.2 CMDâ Ȥ�� Powershellâ���� ��ġ������ �޾����ִ� ��η� �̵� ��(cd ���ɾ �̿��Ͽ�), pip�� �̿��Ͽ� ��ġ�մϴ�.
+   3.2 CMD창 혹은 Powershell창에서 설치파일이 받아져있는 경로로 이동 후(cd 명령어를 이용하여), pip를 이용하여 설치합니다.
 
-       ��ġ �� Ȯ���ڸ����� ���� �Է��ؾ� �մϴ�. ex) pip install pyOpenSSL-17.5.0-py2.py3-none-any.whl       
+       설치 시 확장자명까지 전부 입력해야 합니다. ex) pip install pyOpenSSL-17.5.0-py2.py3-none-any.whl       
   
-4. Scrapy ��ġ
+4. Scrapy 설치
 
-   4.1 CMDâ Ȥ�� Powershellâ���� pip�� �̿��Ͽ� ��ġ�մϴ�.(pip install Scrapy) ��ġ �� scrapy���ɾ �Է��Ͽ� ���������� ��ġ ����� Ȯ���մϴ�.
+   4.1 CMD창 혹은 Powershell창에서 pip를 이용하여 설치합니다.(pip install Scrapy) 설치 후 scrapy명령어를 입력하여 정상적으로 설치 되었는지 
+       
+       확인합니다.
 
 
-Scrapy ��ġ���� �Ϸ��Ͽ��ٸ� ������ �Ϸ��Դϴ�.
+Scrapy 설치까지 완료하였다면 셋팅은 완료입니다.
 
    
