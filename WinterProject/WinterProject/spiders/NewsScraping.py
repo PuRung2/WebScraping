@@ -6,7 +6,7 @@ import csv
 from WinterProject.items import NewscrawlingItem
  
 class NewsUrlSpider(scrapy.Spider):      # 기사제목과 기사의 링크를 가져오는 클래스
-    name = "newsUrlCrawler"
+    name = "webscrapy"
  
     def start_requests(self):
         press = [45, 190, 38] # 8: 중앙, 190: 동아, 200: 조선
@@ -30,10 +30,10 @@ class NewsUrlSpider(scrapy.Spider):      # 기사제목과 기사의 링크를 �
             item['url'] = sel.xpath('strong[@class="tit_thumb"]/a/@href').extract()[0]
             item['date'] = sel.xpath('strong[@class="tit_thumb"]/span/span[@class="info_time"]/text()').extract()[0]
  
-            print('*'*100)
+            print('-'*100)
             print(item['title'])
  
-            time.sleep(5)
+            time.sleep(1)
  
             yield item
  

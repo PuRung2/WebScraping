@@ -17,7 +17,7 @@ from scrapy import log
 class JsonPipeline(object):
     def __init__(self):
         self.file = open("newsCrawl.json", 'wb')
-        self.exporter = JsonItemExporter(self.file, encoding='utf-8', ensure_ascii=False)
+        self.exporter = JsonItemExporter(self.file, encoding='euc-kr', ensure_ascii=False)
         self.exporter.start_exporting()
  
     def close_spider(self, spider):
@@ -32,7 +32,7 @@ class JsonPipeline(object):
 class CsvPipeline(object):
     def __init__(self):
         self.file = open("newsUrlCrawl.csv", 'wb')
-        self.exporter = CsvItemExporter(self.file, encoding='utf-8')
+        self.exporter = CsvItemExporter(self.file, encoding='euc-kr')
         self.exporter.start_exporting()
  
     def close_spider(self, spider):
