@@ -6,7 +6,7 @@ import csv
 from WinterProject.items import NewscrawlingItem
  
 class NewsUrlSpider(scrapy.Spider):      # 기사제목과 기사의 링크를 가져오는 클래스
-    name = "webscrapy"
+    name = "webtitlescrapy"
  
     def start_requests(self):
         press = [45, 190, 38] # 8: 중앙, 190: 동아, 200: 조선
@@ -25,7 +25,7 @@ class NewsUrlSpider(scrapy.Spider):      # 기사제목과 기사의 링크를 �
             item = NewscrawlingItem()
  
             item['source'] = sel.xpath('strong/span[@class="info_news"]/text()').extract()[0]
-            item['category'] = '정치'
+            item['category'] = 'politics'
             item['title'] = sel.xpath('strong[@class="tit_thumb"]/a/text()').extract()[0]
             item['url'] = sel.xpath('strong[@class="tit_thumb"]/a/@href').extract()[0]
             item['date'] = sel.xpath('strong[@class="tit_thumb"]/span/span[@class="info_time"]/text()').extract()[0]
@@ -41,7 +41,7 @@ class NewsUrlSpider(scrapy.Spider):      # 기사제목과 기사의 링크를 �
 
  
 class NewsSpider(scrapy.Spider):          # 기사의 내용을 크롤링 하는 클래스 
-    name = "newsCrawler"
+    name = "webbodyscrapy"
  
     def start_requests(self):
         with open('newsUrlCrawl.csv') as csvfile:
@@ -53,7 +53,7 @@ class NewsSpider(scrapy.Spider):          # 기사의 내용을 크롤링 하는
         item = NewscrawlingItem()
  
         item['source'] = response.xpath('//*[@id="cSub"]/div[1]/em/a/img/@alt').extract()[0]
-        item['category'] = '정치'
+        item['category'] = 'politics'
         item['title'] = response.xpath('//*[@id="cSub"]/div[1]/h3/text()').extract()[0]
         item['date'] = response.xpath('/html/head/meta[contains(@property, "og:regDate")]/@content').extract()[0][:8]
         item['article'] = response.xpath('//*[@id="harmonyContainer"]/section/div[contains(@dmcf-ptype, "general")]/text()').extract() \

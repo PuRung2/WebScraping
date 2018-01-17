@@ -10,7 +10,7 @@ import scrapy
 
 class NewscrawlingItem(scrapy.Item):
     # define the fields for your item here like:
-    source = scrapy.Field() # 신문사
+    source = scrapy.Field() # 신문사w
     category = scrapy.Field() # 카테고리
     title = scrapy.Field() # 제목
     url = scrapy.Field() # 기사링크

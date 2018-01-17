@@ -17,7 +17,7 @@ from scrapy import log
 class JsonPipeline(object):
     def __init__(self):
         self.file = open("newsCrawl.json", 'wb')
-        self.exporter = JsonItemExporter(self.file, encoding='euc-kr', ensure_ascii=False)
+        self.exporter = JsonItemExporter(self.file, encoding='utf-8', ensure_ascii=False)
         self.exporter.start_exporting()
  
     def close_spider(self, spider):
@@ -43,29 +43,6 @@ class CsvPipeline(object):
         self.exporter.export_item(item)
         return item
  
-#MongoDB에 저장하는 
-class MongoDBPipeline(object):
- 
-    def __init__(self):
-        connection = pymongo.MongoClient(
-            settings['MONGODB_SERVER'],
-            settings['MONGODB_PORT']
-        )
-        db = connection[settings['MONGODB_DB']]
-        self.collection = db[settings['MONGODB_COLLECTION']]
- 
-    def process_item(self, item, spider):
-        valid = True
-        for data in item:
-            if not data:
-                valid = False
-                raise DropItem("Missing {0}!". format(data))
- 
-        if valid:
-            self.collection.insert(dict(item))
-            log.msg("News added to MongoDB database!",
-                    level=log.DEBUG, spider=spider)
- 
-        return item
+
 
 
