@@ -17,12 +17,24 @@
      
     1.4 자신의 버전에 맞는 설치파일 다운로드. OS 32bit는 win32, 64bit는 amd64를 고르면 되고, 버전은 각자의 파이썬 버전에 맞는걸 고르면 됩니다.
         ex) 본인이 Windows 64bit,Python 2.7.x 버전이라면, pywin32-221.win-amd64-py2.7exe 를 고르면 됩니다.
+           
 
     1.5 설치파일을 실행하여 설치 완료하기.
  
+ 2. Scrapy 설치
+
   
-  
- 2.lxml 설치
+    4.1 CMD창 혹은 Powershell창에서 pip를 이용하여 설치합니다.(pip install Scrapy) 설치 후 scrapy명령어를 입력하여 정상적으로 설치되었는지 
+ 
+        확인합니다.
+
+
+ 주의사항
+
+   - Python3버전대에서는 pip3 install scrapy만 실행하더라도 lxml과 pyOpenssl, Twisted이 자동으로 설치 되는것같습니다.(스크래피를 사용하기 위해 필요하므로)
+     그런데 혹시 scrapy 를 설치하는 과정중에 이 세가지가 자동으로 설치 안되어 따로 설치해줘야 할 경우 아래와 같이 시행하면 됩니다.
+
+  1.lxml 설치
 
   
     2.1 PIP패키지를 이용하면 간단히 설치할 수 있습니다. CMD창 혹은 Powershell창에서 pip install lxml 을 입력해 주시면 됩니다.
@@ -31,7 +43,7 @@
         Python 3.x 버전대라면 pip3 install lxml라고 하시면 됩니다.(pip에 3을 붙이셔야됩니다.)
   
   
- 3. pyOpenSSL 설치
+  2.pyOpenSSL 설치
  
   
     3.1 먼저 https://pypi.python.org/pypi/pyOpenSSL 에 접속해서 설치 파일을 다운로드 받습니다. 
@@ -43,15 +55,14 @@
     3.2 CMD창 혹은 Powershell창에서 설치파일이 받아져있는 경로로 이동 후(cd 명령어를 이용하여), pip를 이용하여 설치합니다.
  
   
-        설치 시 확장자명까지 전부 입력해야 합니다. ex) pip install pyOpenSSL-17.5.0-py2.py3-none-any.whl       
-      
-    
- 4. Scrapy 설치
+        설치 시 확장자명까지 전부 입력해야 합니다. ex) pip install pyOpenSSL-17.5.0-py2.py3-none-any.whl    
+
+  3. Twisted 설치
+       
+      https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted  이 링크에서 해당 버전에 맞게 설치하시면 됩니다.
 
   
-    4.1 CMD창 혹은 Powershell창에서 pip를 이용하여 설치합니다.(pip install Scrapy) 설치 후 scrapy명령어를 입력하여 정상적으로 설치되었는지 
- 
-        확인합니다.
+전부 설치하고 다시 install scrapy를 실행하시면 정상적으로 설치 됩니다.    
   
   
  Scrapy 설치까지 완료하였다면 셋팅은 완료입니다.
