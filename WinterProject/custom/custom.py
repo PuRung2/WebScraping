@@ -29,9 +29,9 @@ nouns = nlp.nouns(text)
     
 count = Counter(nouns)
 
-tag2 = count.most_common(20)
-#taglist = pytagcloud.make_tags(tag2, maxsize=80)
-#pytagcloud.create_tag_image(taglist, 'wordcloud.jpg', size=(900, 600), fontname='Nobile', rectangular=False)
+tag2 = count.most_common(30)
+taglist = pytagcloud.make_tags(tag2, maxsize=80)
+pytagcloud.create_tag_image(taglist, 'wordcloud.jpg', size=(500, 500), fontname='Korean', rectangular=False)
 
 
 
