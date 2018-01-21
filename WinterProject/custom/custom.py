@@ -1,4 +1,5 @@
 import json
+from newspaper import Article
 
 urllist = []
 f = open('test.json', 'r')
@@ -8,9 +9,21 @@ js = json.loads(f.read())
 for col in js:
 	urllist.append(col['url'])
 
-
-print(urllist)
-
 #print("\n".join([col['url'] for col in js])) 
 f.close()
+
+for url in urllist:
+    a = Article(url, language = 'ko')
+    a.download()
+    a.parse()
+    print(a.title)
+    print(a.text[:3000])
+
+
+
+
+
+
+
+
 
